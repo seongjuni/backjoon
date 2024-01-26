@@ -3,16 +3,24 @@ using namespace std;
 
 int main()
 {
-	string N;
-	int B;
+	int N, B;
 	cin >> N >> B;
-	int res = 0;
-	for (int i = 0; i < N.length(); i++)
+	string res ;
+	
+	for (; N > 0; N /= B)
 	{
-		if ('0' <= N[i] && N[i] <= '9')
-			res = res * B + (N[i] - '0');
+		int rem = N % B;
+		if (rem < 10)
+			res += (char)(rem + '0');
 		else
-			res = res * B + (N[i] - 'A' + 10);
+			res += (char)(rem + 'A' - 10);
+	}
+
+	for (int i = 0; i < res.length() / 2; i++)
+	{
+		char rem = res[i];
+		res[i] = res[res.length() - 1 - i];
+		res[res.length() - 1 - i] = rem;
 	}
 	cout << res;
 }
