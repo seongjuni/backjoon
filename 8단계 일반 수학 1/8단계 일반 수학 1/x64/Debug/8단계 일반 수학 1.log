@@ -1,2 +1,5 @@
-﻿  2903.cpp
-  8단계 일반 수학 1.vcxproj -> C:\Users\seong\OneDrive\바탕 화면\백준\backjun\8단계 일반 수학 1\x64\Debug\8단계 일반 수학 1.exe
+﻿  2292.cpp
+  2903.cpp
+  코드를 생성하고 있습니다...
+2903.obj : error LNK2005: main이(가) 2292.obj에 이미 정의되어 있습니다.
+C:\Users\seong\OneDrive\바탕 화면\백준\backjun\8단계 일반 수학 1\x64\Debug\8단계 일반 수학 1.exe : fatal error LNK1169: 여러 번 정의된 기호가 있습니다.
