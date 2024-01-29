@@ -1,12 +1,15 @@
 #include <iostream>
 using namespace std;
 
-int main() {
-    int N, dot = 2;
-    cin >> N;
+int main()
+{
+	int N, dot = 2;
+	cin >> N;
 
-    while (N--)
-        dot = dot * 2 - 1;
+	for (int i = 0; i < N; i++)
+	{
+		dot = dot * 2 - 1;
+	}
 
-    cout << dot * dot;
+	cout << dot * dot;
 }
