@@ -1,40 +1,50 @@
 #include <iostream>
-#include <vector>
 using namespace std;
 
-int main() {
-    while (true) {
-        int n;
-        cin >> n;
+int main()
+{
+	int n;
 
-        if (n == -1) {
-            break;  // 입력의 마지막인 경우 종료
-        }
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
 
-        int sum = 0;
-        vector<int> divisors;
+	while (true)
+	{
+		cin >> n;
 
-        for (int i = 1; i <= n / 2; i++) {
-            if (n % i == 0) {
-                sum += i;
-                divisors.push_back(i);
-            }
-        }
+		if (n == -1)
+		{
+			break;
+		}
 
-        if (sum == n) {
-            cout << n << " = ";
-            for (size_t i = 0; i < divisors.size(); i++) {
-                cout << divisors[i];
-                if (i < divisors.size() - 1) {
-                    cout << " + ";
-                }
-            }
-            cout << '\n';
-        }
-        else {
-            cout << n << " is NOT perfect.\n";
-        }
-    }
+		int res = 0;
 
-    return 0;
+		for (int i = 1; i < n; i++) {
+			if (n % i == 0) {
+				res += i;
+			}
+		}
+
+
+		if (res == n)
+		{
+			cout << n << " = 1";
+			for (int i = 2; i < n; i++)
+			{
+				if (n % i == 0) {
+					cout << " + " << i;
+				}
+			}
+			cout << endl;
+		}
+
+		else
+		{
+			cout << n << " is NOT perfect." << endl;;
+		}
+		
+		res = 0;
+	}
+
+	return 0;
 }
